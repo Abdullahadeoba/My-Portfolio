@@ -8,7 +8,8 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "fira code";
 }
 
 :root {
@@ -285,7 +286,6 @@ section {
     border-bottom: 50vh solid var(--main-color);
     border-left: 384px solid transparent;
 }
-
 .home-img img {
     position: absolute;
     bottom: 0;
@@ -293,6 +293,7 @@ section {
     pointer-events: none;
     max-width: 480px;
     max-height: 100vh;
+    top: 100px;
 }
 
 span {
