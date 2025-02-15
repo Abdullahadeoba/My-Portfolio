@@ -291,7 +291,7 @@ section {
     bottom: 0;
     right: 40px;
     pointer-events: none;
-    max-width: 480px;
+    max-width: 580px;
     max-height: 100vh;
     top: 100px;
 }
