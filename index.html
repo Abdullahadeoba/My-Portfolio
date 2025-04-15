@@ -14,6 +14,73 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- custom css -->
+    <style>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .home-img {
+                display: none;
+            }
+            
+            .home-content {
+                text-align: center;
+                padding: 0 20px;
+            }
+            
+            .profession-container {
+                margin-top: 30px;
+            }
+            
+            .about {
+                flex-direction: column;
+            }
+            
+            .about-img {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+            
+            .home-content h1 {
+                font-size: 2rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Circular images */
+        .home-img img,
+        .about-img img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 10px solid var(--main-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive circular images */
+        @media (max-width: 992px) {
+            .home-img img,
+            .about-img img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-img img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,7 +89,7 @@
     <!-- header design -->
     <header class="header">
         <a href="#" class="logo">Portfolio.</a>
-
+ 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
