@@ -1,81 +1,78 @@
-/*========== menu icon navbar ==========*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+/**
+ * Nuruddeen Abdullah Adeoba - Portfolio Script Configuration
+ * Production-optimized version (Removed bloated animations, fixed runtime block errors)
+ */
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+document.addEventListener('DOMContentLoaded', () => {
 
+    /*========== Menu Icon & Navbar Toggle Control ==========*/
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
 
-/*========== scroll sections active link ==========*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
+    if (menuIcon && navbar) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
         };
-    });
+    }
+
+    /*========== High-Performance Scroll Handling ==========*/
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav a');
+    const header = document.querySelector('.header');
+
+    // Executing the scroll routine with passive event telemetry to maximize hardware performance
+    window.addEventListener('scroll', () => {
+        const top = window.scrollY;
+
+        // 1. Sticky Navbar State Control
+        if (header) {
+            header.classList.toggle('sticky', top > 100);
+        }
+
+        // 2. Active Section Navigation Tracking
+        sections.forEach(sec => {
+            const offset = sec.offsetTop - 150;
+            const height = sec.offsetHeight;
+            const id = sec.getAttribute('id');
+
+            if (top >= offset && top < offset + height && id) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const targetLink = document.querySelector(`header nav a[href*="${id}"]`);
+                    if (targetLink) {
+                        targetLink.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // 3. Auto-Collapse Mobile Navbar Context on Scroll Active States
+        if (menuIcon && navbar) {
+            menuIcon.classList.remove('bx-x');
+            navbar.classList.remove('active');
+        }
+    }, { passive: true });
 
 
-/*========== sticky navbar ==========*/
-let header = document.querySelector('.header');
+    /*========== Theme Switcher Module (Dark / Light Mode Toggle) ==========*/
+    const darkModeIcon = document.querySelector('#darkMode-icon');
 
-header.classList.toggle('sticky', window.scrollY > 100);
+    if (darkModeIcon) {
+        darkModeIcon.onclick = () => {
+            darkModeIcon.classList.toggle('bx-sun');
+            document.body.classList.toggle('dark-mode');
+            
+            // Production Tip: Persist preferences across window instances
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+        };
 
+        // Automatically restore user's last chosen theme state on initial document lifecycle pass
+        if (localStorage.getItem('portfolio-theme') === 'dark') {
+            darkModeIcon.classList.add('bx-sun');
+            document.body.classList.add('dark-mode');
+        }
+    }
 
-/*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
-
-};
-
-
-/*========== swiper ==========*/
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 50,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
 });
-
-
-/*========== dark light mode ==========*/
-let darkModeIcon = document.querySelector('#darkMode-icon');
-
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('dark-mode');
-};
-
-
-/*========== scroll reveal ==========*/
-ScrollReveal({
-    // reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });

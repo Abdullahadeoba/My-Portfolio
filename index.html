@@ -5,26 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuruddeen Abdullah Adeoba</title>
+    <title>Nuruddeen Abdullah Adeoba | Portfolio</title>
 
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-    <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- custom css -->
     <style>
-     
+        /* Modern CSS Grid Layout for Testimonials replacing SwiperJS */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f5;
+        }
+        .testimonial-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+        <a href="#" class="logo">Abdullah</a>
  
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -35,11 +49,9 @@
         </nav>
 
         <div class="bx bx-moon" id="darkMode-icon"></div>
-
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, I am</h3>
@@ -54,7 +66,12 @@
                 I thrive on staying ahead of evolving cyber threats and leveraging my skills in ethical hacking, security audits, and incident response to safeguard systems. My goal is to create a secure and resilient digital environment for businesses and individuals.
             </p>
             <p>
-                Currently I'm a student of <a href="https://edu.sqi.ng" target="_blank" rel="noopener noreferrer"><strong>Soft Quest Incorporated college of ICT (SQI)</strong></a>, where I'm learning how to protect and secure applications and networks, as well as website design and development.
+                <p>
+                    I am a proud graduate of <a href="https://edu.sqi.ng" target="_blank" rel="noopener noreferrer"><strong>Soft Quest Incorporated College of ICT (SQI)</strong></a>, where I successfully mastered application safety engineering, network perimeter security, and full-stack software development pipelines.
+                    <p>
+                        A professional Cybersecurity Specialist and Web Developer dedicated to building resilient applications and securing enterprise network infrastructure
+                    </p>
+                </p>
             </p>
     
             <div class="social-media">
@@ -66,207 +83,179 @@
             </div>
         </div>
     
-        <!-- <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
-                    <i class='bx bx-lock'></i>
-                    <h3>Application Security</h3>
-                </div>
-                <div class="profession" style="--i:1;">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Web Developer</h3>
-                </div>
-                <div class="profession" style="--i:2;">
-                    <i class='bx bx-palette'></i>
-                    <h3>Web Designer</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class='bx bx-lock'></i>
-                    <h3>Network & System Security</h3>
-                </div>
-                <div class="circle"></div>
-            </div>
-            <div class="overlay"></div>
-        </div> -->
-    
-        <div class="home-img ">
-            <img src="images/SQI_9583-removebg-preview.png" alt="Nuruddeen Abdullah Adeoba">
+        <div class="home-img">
+            <img src="images/Anaye2.jpeg" alt="Nuruddeen Abdullah Adeoba">
         </div>
     </section>
 
-    <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/SQI_9583-removebg-preview.png" alt="">
+            <img src="images/Anaye1.jpeg" alt="Nuruddeen Abdullah Adeoba Profile View">
         </div>
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>
-                Hi there, welcome to my website! I'm Abdullah Adeoba,
-                a passionate Cyber Security who enjoys learning new technologies
-                and solving problems with code!
+             I am Abdullah Adeoba, an engineering specialist who builds fast systems and hardens enterprise attack surfaces against modern threat profiles.
             </h3>
             <p>
-                🔐 Cyber Security Specialist | Ethical Hacker | Tech Enthusiast 🔐
-            Protecting digital spaces, securing networks, and fighting cyber threats one firewall at a time. Passionate about ethical hacking, data privacy, and empowering others with cybersecurity knowledge.
+                Operating with an analytical security mindset, I systematically identify software misconfigurations, isolate platform logic vulnerabilities, and structure resilient firewalls. My operational methodology focuses heavily on automated risk surface reductions and information privacy enforcement.
             </p>
-            <p>
-                Thank you for visiting my website and getting to know me better. I hope you know me better</p>
-            <a href="#" class="btn">Read More</a>
+            <a href="#" class="btn">View Technical Resume</a>
         </div>
     </section>
 
-    <!-- services section design -->
     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
+        <h2 class="heading">Core <span>Expertise</span></h2>
 
         <div class="services-container">
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>Web Development</h3>
-                <p>Passionate web developer skilled in creating responsive, user-friendly websites with clean code, modern design, and seamless functionality.</p>
-                <a href="#" class="btn">Read More</a>
+                <p>Building high-performance, responsive web architectures utilizing strict semantic validation rules, secure processing pipelines, and clean object layout conventions.</p>
             </div>
             <div class="services-box">
                 <i class='bx bx-user'></i>
                 <h3>Web Design</h3>
-                <p>Web developer specializing in building dynamic, responsive, and user-friendly websites with modern technologies and clean code.</p>
-                <a href="#" class="btn">Read More</a>
+                <p>Architecting accessible, clean user interfaces with modern wireframing structures focused entirely on functional user flows and scannable visual patterns.</p>
             </div>
             <div class="services-box">
                 <i class='bx bx-lock'></i>
                 <h3>Application Security</h3>
-                <p>Focused on identifying vulnerabilities, implementing secure coding practices, and safeguarding applications from cyber threats.</p>
-                <a href="#" class="btn">Read More</a>
+                <p>Mitigating critical risk domains such as standard OWASP Top 10 exploits through strict dependency patch auditing, token generation controls, and input data hygiene.</p>
             </div>
             <div class="services-box">
-                <i class='bx bx-lock'></i>
-                <h3>Networks & System Security</h3>
-                <p>Network security specialist dedicated to protecting systems, preventing cyber threats, and ensuring secure, resilient network infrastructures.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class='bx bx-shield'></i>
+                <h3>Network & System Security</h3>
+                <p>Configuring secure network infrastructures, managing access management lists, and monitoring packet telemetry patterns to intercept system anomalies before impact.</p>
             </div>
         </div>
     </section>
 
-    <!-- portfolio section design -->
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
+        <h2 class="heading">Recent <span>Projects</span></h2>
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="images/music-player-application-interface-template-collection_23-2148530265.jpg" alt="">
-
+                <img src="images/music-player-application-interface-template-collection_23-2148530265.jpg" alt="Music Streaming Platform Architecture">
                 <div class="portfolio-layer">
-                    <h4>Music App</h4>
-                    <p>Application to listen,download and stream your Music<i class="bx bx-music"></i></p>
+                    <h4>Music Application</h4>
+                    <p>Streamlined music streaming container with robust caching structures for smooth content delivery pipelines.</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="/images/geea.jpg" alt="">
-
+                <img src="/images/geea.jpg" alt="Automated Academic Evaluation Dashboard">
                 <div class="portfolio-layer">
-                    <h4>Grading System</h4>
-                    <p>Application to check your grade and know your percentage</p>
-                    <a href="https://grading-system-ten.vercel.app/"><i class='bx bx-link-external'></i></a>
+                    <h4>Grading System Engine</h4>
+                    <p>Mathematical calculations engine automating data validation matrix workflows to evaluate performance metrics cleanly.</p>
+                    <a href="https://grading-system-ten.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/budget.avif" alt="">
-
+                <img src="images/budget.avif" alt="Financial Ledger Ledger Tracking Interface">
                 <div class="portfolio-layer">
-                    <h4>Budget App</h4>
-                    <p>Application to set your daily budget</p>
-                    <a href=""><i class='bx bx-link-external'></i></a>
+                    <h4>Asset Ledger Application</h4>
+                    <p>Personal financial balancing application built to process calculations securely with structured storage vectors.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/www.avif" alt="">
-
+                <img src="images/www.avif" alt="Weather Reporting Client Interface">
                 <div class="portfolio-layer">
-                    <h4>Weather App</h4>
-                    <p>A user-friendly weather app providing real-time forecasts, temperature updates, and weather alerts for accurate and reliable climate information</p>
-                    <a href="https://weather-two-jet.vercel.app/"><i class='bx bx-link-external'></i></a>
+                    <h4>Live Climate Client</h4>
+                    <p>Consumes remote live REST API layers asynchronously to provide clean geographical parameter analysis data.</p>
+                    <a href="https://weather-two-jet.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/lll.avif" alt="">
-
+                <img src="images/lll.avif" alt="Compatibility Evaluation Tool Mockup">
                 <div class="portfolio-layer">
-                    <h4>Love Calculator</h4>
-                    <p>Find out your love compatibility with a fun and simple love calculator!</p>
-                    <a href="https://love-calculator-avbz.vercel.app/"><i class='bx bx-link-external'></i></a>
+                    <h4>Compatibility Calculator</h4>
+                    <p>Lightweight JavaScript algorithms processing simple user inputs smoothly across fluid interactive interfaces.</p>
+                    <a href="https://love-calculator-avbz.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/rur.jpg" alt="">
-
+                <img src="images/rur.jpg" alt="Chronological Dynamic Age Assessment Component">
                 <div class="portfolio-layer">
-                    <h4>Age Calculator</h4>
-                    <p>Easily calculate your age in years, months, and days with our age calculator</p>
-                    <a href="https://calculate-age-theta.vercel.app/"><i class='bx bx-link-external'></i></a>
+                    <h4>Age Calculation Service</h4>
+                    <p>Accurate server-side or local chronological algorithm processing localized datetime objects flawlessly.</p>
+                    <a href="https://calculate-age-theta.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
                 </div>
+            </div>
+
+                <div class="portfolio-box">
+                    <img src="images/bank.jpeg" alt="Secure Digital Banking Architecture">
+                    <div class="portfolio-layer">
+                        <h4>Secure Bank App</h4>
+                        <p>Full-stack financial banking application featuring multi-factor TOTP 2FA authentication, automated transactional ledgers, activity logs, and strict database isolation profiles.</p>
+                        <a href="https://github.com/Abdullahadeoba/Bank_App" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/fashion.webp" alt="Fashion Wears E-Commerce Interface">
+                    <div class="portfolio-layer">
+                        <h4>Fashion Wears</h4>
+                        <p>High-performance, modern e-commerce storefront showcasing fluid responsive product configurations, persistent cart validation, and an accessible frontend design lifecycle.</p>
+                        <a href="https://fashion-wears-ten.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/crypto.jpeg" alt="Crypto Wallet Token Analytics Interface">
+                    <div class="portfolio-layer">
+                        <h4>Crypto Wallet</h4>
+                        <p>A web-based decentralized finance client tracking asset values, token metrics, and wallet authentication hooks with responsive, clean data displays.</p>
+                        <a href="https://crypto-wallet-sand.vercel.app/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+   <section class="testimonial-container" id="testimonials" style="padding: 5rem 1%; max-width: 1200px; margin: 0 auto;">
+        <h2 class="heading" style="text-align: center; margin-bottom: 3rem;">Valuable <span>Testimonials</span></h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="images/testimonial1.jpg" alt="Ajayi Ayomide">
+                <h3>Ajayi Ayomide</h3>
+                <p>"Working with you on our cybersecurity infrastructure was a game-changer. Your thorough vulnerability assessment and implementation of robust security measures protected us from multiple potential breaches. Your attention to detail and proactive approach to threat prevention is exceptional."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/testimonial2.jpg" alt="Bolaji Kehinde Ajibola">
+                <h3>Bolaji Kehinde Ajibola</h3>
+                <p>"The website you designed and developed for our business exceeded all expectations. Not only is it visually stunning with perfect responsive design, but the backend architecture is so efficient that our load times improved by 60%. The built-in security features give us complete peace of mind."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/testimonial3.jpg" alt="Amole Uthman">
+                <h3>Amole Uthman</h3>
+                <p>"As a fellow developer, I'm impressed by your full-stack capabilities. You seamlessly integrated complex systems while maintaining impeccable security standards. Your code is clean, well-documented, and follows best practices. Excellent optimization skills."</p>
             </div>
         </div>
     </section>
 
-   <!-- testimonial design -->
-<div class="testimonial-container">
-    <h2 class="heading">Valuable <span>Testimonial</span></h2>
-
-    <div class="testimonial-wrapper">
-        <div class="testimonial-box mySwiper">
-            <div class="testimonial-content swiper-wrapper">
-                <div class="testimonial-slide swiper-slide">
-                    <img src="images/testimonial1.jpg" alt="Ajayi Ayomide">
-                    <h3>Ajayi Ayomide</h3>
-                    <p>Working with you on our cybersecurity infrastructure was a game-changer. Your thorough vulnerability assessment and implementation of robust security measures protected us from multiple potential breaches. The way you explained complex security concepts in simple terms helped our entire team become more security-conscious. Your attention to detail and proactive approach to threat prevention is exceptional.</p>
-                </div>
-                <div class="testimonial-slide swiper-slide">
-                    <img src="images/testimonial2.jpg" alt="Bolaji Kehinde Ajibola">
-                    <h3>Bolaji Kehinde Ajibola</h3>
-                    <p>The website you designed and developed for our business exceeded all expectations. Not only is it visually stunning with perfect responsive design, but the backend architecture is so efficient that our load times improved by 60%. Your understanding of both design aesthetics and technical implementation is rare. The security features you built in give us complete peace of mind knowing our customer data is protected.</p>
-                </div>
-                <div class="testimonial-slide swiper-slide">
-                    <img src="images/testimonial3.jpg" alt="Amole Uthman">
-                    <h3>Amole Uthman</h3>
-                    <p>As a fellow developer, I'm impressed by your full-stack capabilities. You seamlessly integrated complex systems while maintaining impeccable security standards. Your code is clean, well-documented, and follows best practices. The web application you delivered performs flawlessly under heavy traffic, thanks to your optimization skills. You're that rare professional who masters both frontend elegance and backend robustness.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- contact section design -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <h2 class="heading">Secure <span>Contact Portal</span></h2>
 
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
                 <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-           <a href=""> <input type="submit" value="Send Message" class="btn"></a>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Project Parameters / Messages" required></textarea>
+            <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Secure Message</button>
         </form>
     </section>
 
-    <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 | All Rights Reserved.</p>
+            <p>Copyright &copy; 2026 | Nuruddeen Abdullah Adeoba | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">
@@ -274,14 +263,6 @@
         </div>
     </footer>
 
-
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- custom js -->
     <script src="js/script.js"></script>
 </body>
 
